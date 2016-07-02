@@ -20,11 +20,12 @@ export default new class Routes {
     }
   }
 
-  get PresentationScreen () {
+  get NotesScreen () {
     return {
-      title: I18n.t('welcome'),
-      component: require('../Containers/PresentationScreen').default,
-      leftButton: 'HAMBURGER'
+      title: I18n.t('notes'),
+      component: require('../Containers/NotesScreen').default,
+      leftButton: 'HAMBURGER',
+      rightButton: 'CREATE'
     }
   }
 
@@ -34,6 +35,17 @@ export default new class Routes {
       component: require('../Containers/LoginScreen').default,
       customConfiguration: Transitions.modal,
       leftButton: 'BACK'
+    }
+  }
+
+  ShowNoteScreen (data) {
+    return {
+      title: data.tittle,
+      component: require('../Containers/ShowNoteScreen').default,
+      leftButton: 'BACK',
+      passProps: {
+        id: data.id
+      }
     }
   }
 

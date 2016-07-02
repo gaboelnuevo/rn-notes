@@ -31,6 +31,18 @@ export default {
         />
       </TouchableOpacity>
     )
+  },
+
+  createButton (onPressFunction) {
+    return (
+      <TouchableOpacity onPress={onPressFunction}>
+        <Icon name='plus'
+          size={Metrics.icons.medium}
+          color={Colors.snow}
+          style={styles.navButtonRight}
+        />
+      </TouchableOpacity>
+    )
   }
 
 }

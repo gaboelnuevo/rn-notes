@@ -20,6 +20,8 @@ export default {
         return NavButtons.backButton(this.BackButton.bind(this, navigator))
       case 'HAMBURGER':
         return NavButtons.hamburgerButton(navigator.state.tapHamburger)
+      case 'CREATE':
+          return NavButtons.createButton(navigator.state.tapCreate)
       default:
         return (<Text>Needs Button</Text>)
     }
